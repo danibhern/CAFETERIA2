@@ -86,6 +86,7 @@ nav {
   height: 100%;
   display: flex;
   background-position: center;
+  background-repeat: no-repeat;
 
 }
 
