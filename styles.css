@@ -30,12 +30,10 @@ nav {
 }
 
 .barra-nav img {
-  max-height: 120px; /* Ajusta este valor para achicar o agrandar */
-  width: auto;      /* Mantiene proporción */
+  max-height: 140px; 
+  width: auto;      
   display: block;   /* Para mejor control */
 }
-
-
 
 .nav-links {
   display: flex;
@@ -109,6 +107,7 @@ nav {
   background-color: #b85390;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(163, 67, 170, 0.2);
+  display: block;
 }
 .promo-mes h2 {
   text-align: center;
@@ -126,7 +125,9 @@ nav {
   border-radius: 12px;
   max-width: 300px;
   flex: 1 1 300px;
+  margin-top: -50px;
 }
+
 .producto-info {
   flex: 2 1 400px;
   color: white;
