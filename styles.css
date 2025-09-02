@@ -1,0 +1,225 @@
+/* Reset & base */
+body, html {
+  margin: 0; padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:  #e3c0d5;
+  color: #4a2542;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  background: linear-gradient(90deg, #b85390, #b788bd);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 2rem;
+  height: 50px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+}
+.barra-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.barra-nav img {
+  max-height: 120px; /* Ajusta este valor para achicar o agrandar */
+  width: auto;      /* Mantiene proporción */
+  display: block;   /* Para mejor control */
+}
+
+
+
+.nav-links {
+  display: flex;
+  gap: 1.6rem;
+}
+.nav-links a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.boton-login {
+  background-color: #b85390;
+  color: white;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.boton-login:hover,
+.boton-login:focus {
+  background-color: #ffaf00;
+  color: #fff;
+  outline: none;
+}
+
+.carrusel {
+  margin: 2rem auto;
+  max-width: 900px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-height: 300px;
+}
+.carrusel-imagenes {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+}
+.carrusel-imagenes img {
+  width: 100%;
+  flex-shrink: 0;
+}
+.carrusel-control {
+  text-align: center;
+  margin-top: 0.7rem;
+}
+.carousel-button {
+  cursor: pointer;
+  border: none;
+  background: #b85390;
+  color: white;
+  padding: 6px 14px;
+  margin: 0 6px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+/* Producto del mes */
+.producto-mes {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  background-color: #b85390;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(163, 67, 170, 0.2);
+}
+.producto-mes h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+.producto-mes article {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.producto-mes img {
+  border-radius: 12px;
+  max-width: 400px;
+  flex: 1 1 300px;
+}
+.producto-info {
+  flex: 2 1 400px;
+  color: white;
+}
+.producto-info h3 {
+  margin-top: 0;
+  font-weight: 700;
+}
+.producto-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.reservacion {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #b788bd;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.reservacion h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+form {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: 600;
+}
+input {
+  padding: 8px 10px;
+  border: 2px solid #b85390;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline-offset: 2px;
+}
+button[type="submit"] {
+  background-color: #b85390;
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #b85390;
+  outline: none;
+}
+
+footer {
+  background-color: #b85390;
+  color: #faf9f7;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footer-section {
+  min-width: 200px;
+}
+.footer-section h3 {
+  border-bottom: 1.5px solid #b85390;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-section li {
+  margin-bottom: 0.8rem;
+}
+.footer-section a {
+  color: #faf9f8;
+  transition: color 0.3s ease;
+}
+.footer-section a:hover,
+.footer-section a:focus {
+  color: #fffefd;
+  outline: none;
+}

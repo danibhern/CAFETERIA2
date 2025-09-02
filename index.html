@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cafetería AromaVida</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="barra-nav">
+      <div class="logo"></div>
+      <img src="images/nebula.png" alt="nebula">
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Quienes Somos</a>
+        <a href="#">Menú</a>
+        <a href="#">Pedidos</a>
+      </div>
+    </div>
+    <button class="boton-login">Iniciar sesión</button>
+  </nav>
+
+  <section class="carrusel">
+    <div class="carrusel-imagenes">
+      <img src="https://www.starbucksathome.com/uy/sites/default/files/2021-03/CafeMocha_LongShadow_Cream_1.png" alt="Latte art" />
+      <img src="https://source.unsplash.com/900x400/?coffee,cafe" alt="Taza de café" />
+      <img src="https://source.unsplash.com/900x400/?coffee,beans" alt="Granos de café" />
+    </div>
+    <div class="carrusel-control">
+      <button class="carousel-button" id="prev">&#10094;</button>
+      <button class="carousel-button" id="next">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="producto-mes">
+    <h2>Producto del Mes</h2>
+    <article>
+      <img src="https://source.unsplash.com/400x300/?espresso" alt="Producto del mes: Espresso" />
+      <div class="producto-info">
+        <h3>Espresso Tradicional</h3>
+        <p>Disfruta un espresso intenso, hecho con granos 100% arábica, perfectamente tostados para un sabor profundo y aroma irresistible.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="reservacion">
+    <h2>Reserva tu Mesa</h2>
+    <form>
+      <label for="name">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required />
+
+      <label for="datetime">Fecha y Hora:</label>
+      <input type="datetime-local" id="datetime" name="fechayhora" required />
+
+      <button type="submit">Reservar</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-section">
+      <h3>Redes Sociales</h3>
+      <ul>
+        <li><a href="#" aria-label="Facebook">Facebook</a></li>
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="Twitter">Twitter</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Sucursales</h3>
+      <ul>
+        <li>Calle Principal 123, Melipilla</li>
+        <li>Avenida Central 456, Villarica</li>
+        <li>Bulevar 789, Copiapó</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Políticas</h3>
+      <ul>
+        <li><a href="#">Políticas de Envío</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
