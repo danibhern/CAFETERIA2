@@ -101,8 +101,8 @@ nav {
   border-radius: 6px;
   font-size: 1.2rem;
 }
-/* Producto del mes */
-.producto-mes {
+
+.promo-mes {
   max-width: 900px;
   margin: 3rem auto;
   padding: 1rem 2rem;
@@ -110,22 +110,22 @@ nav {
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(163, 67, 170, 0.2);
 }
-.producto-mes h2 {
+.promo-mes h2 {
   text-align: center;
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: white;
 }
-.producto-mes article {
+.promo-mes article {
   display: flex;
   gap: 2rem;
   align-items: center;
   flex-wrap: wrap;
 }
-.producto-mes img {
+.promo-mes img {
   border-radius: 12px;
-  max-width: 400px;
-  flex: 1 1 300px;
+  max-width: 100px;
+  flex: 1 1 100px;
 }
 .producto-info {
   flex: 2 1 400px;
