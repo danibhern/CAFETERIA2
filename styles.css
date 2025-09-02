@@ -80,13 +80,17 @@ nav {
 }
 .carrusel-imagenes {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 300%;
+  width: 100%;
+  height: max-content;
 }
 .carrusel-imagenes img {
   width: 100%;
-  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  background-position: center;
+
 }
+
 .carrusel-control {
   text-align: center;
   margin-top: 0.7rem;
