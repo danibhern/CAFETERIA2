@@ -1,0 +1,163 @@
+body, html {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:  #e3c0d5;
+    color: #4a2542;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    background: linear-gradient(90deg, #b85390, #b788bd);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 2rem;
+    height: 50px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-bottom: 2rem;
+
+}
+.barra-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.barra-nav img {
+    max-height: 140px; 
+    width: auto;      
+    display: block;  
+    margin-right: 20px; /* Para mejor control */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.6rem;
+}
+.nav-links a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.boton-login {
+    background-color: #b85390;
+    color: white;
+    font-weight: 700;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.boton-login:hover,
+.boton-login:focus {
+    background-color: #ffaf00;
+    color: #fff;
+    outline: none;
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b788bd;
+    width: 45%;
+    height: 350%;
+    flex-direction: column;
+    padding: 2rem ;
+    margin: 10rem auto;
+    margin-bottom: 190px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+#container>h1{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form{
+    display: grid;
+    gap: 1.2rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label{
+    font-weight: 600;
+}
+
+input{
+    padding: 8px 10px;
+    border: 2px solid #b85390;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline-offset: 2px;
+}
+
+button[type="submit"]{
+    background-color: #b85390;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #b85390;
+    outline: none;
+}
+
+footer {
+    background-color: #b85390;
+    color: #faf9f7;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.footer-section {
+    min-width: 200px;
+}
+.footer-section h3 {
+    border-bottom: 1.5px solid #b85390;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-section li {
+    margin-bottom: 0.8rem;
+}
+.footer-section a {
+    color: #faf9f8;
+    transition: color 0.3s ease;
+}
+.footer-section a:hover,
+.footer-section a:focus {
+    color: #fffefd;
+    outline: none;
+}
+
