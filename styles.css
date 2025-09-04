@@ -249,3 +249,8 @@ footer {
   color: #fffefd;
   outline: none;
 }
+
+.error{
+    outline: 1px rgb(248, 157, 172) solid;
+    background-color: #e30c8d;
+}
