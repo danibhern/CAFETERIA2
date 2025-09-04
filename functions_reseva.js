@@ -9,26 +9,32 @@ const set = new Set();
 
 
 nombre.addEventListener('keyup',function(e){
-    if(nombre.value.length == 0){
+    if(nombre.value.length <=3){
         nombre.classList.add("error");
+        set.add("<p> Completar campo Nombre.</p>");
     }else{
         nombre.classList.remove("error");
+        set.delete("<p> Completar campo Nombre.</p> ");
     }
 });
 
 email.addEventListener('keyup',function(e){
     if(!email.value.includes("@")){
         email.classList.add("error");
+        set.add("<p> Completar campo Email con un @. </p>")
     }else{
-        email.classList.remove("error")
+        email.classList.remove("error");
+        set.delete("<p> Completar campo Email con un @. </p>")
     }
 });
 
 telefono.addEventListener('keyup',function(e){
     if(telefono.value.length !==9){
         telefono.classList.add("error");
+        set.add("<p> Completar campo Teléfono con solo 9 digítos. </p>")
     }else{
         telefono.classList.remove("error");
+        set.delete("<p> Completar campo Teléfono con solo 9 digítos. </p>")
     }
 });
 
@@ -37,22 +43,26 @@ telefono.addEventListener('keyup',function(e){
 datetime.addEventListener('change',function(e){ 
     if (!datetime.value || new Date(datetime.value) <= new Date()) {
     datetime.classList.add("error");
+    set.add("<p> Completar campo Fecha y Hora. </p>")
 } else {
     datetime.classList.remove("error");
+    set.delete("<p> Completar campo Fecha y Hora. </p>")
 }
 })
 
-form.addEventListener('submit',function(e){
-    errores.innerHTML="";
+form.addEventListener('submit', function(e) {
+    errores.innerHTML = "";
+    let hayErrores = false;
 
     document.querySelectorAll("input").forEach(element => {
-        if(element.classList.contains("error")){
-            e.preventDefault();
-            set.add("<p> Error, Revisar y rellenar los campos en rosa.")
+        if (element.classList.contains("error")) {
+            hayErrores = true;
         }
-    
     });
-    set.forEach(p=> {
-        errores.innerHTML +=p;
-    })
-})
+
+    if (hayErrores) {
+        e.preventDefault();
+        errores.innerHTML = "<p>Error, revisa y rellena los campos que están en rosa.</p>";
+    }
+});
+
