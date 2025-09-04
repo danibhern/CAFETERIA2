@@ -1,14 +1,17 @@
+/* -------------------- Estilos Globales -------------------- */
 body, html {
   margin: 0; padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background:  #e3c0d5;
+  background: linear-gradient(135deg, #e3c0d5 0%, #bb8fca 100%);
   color: #4a2542;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* -------------------- Navegación -------------------- */
 nav {
   background: linear-gradient(90deg, #b85390, #b788bd);
   display: flex;
@@ -50,6 +53,7 @@ nav {
 .nav-links a:focus {
   background-color: rgba(255, 255, 255, 0.25);
 }
+
 .boton-login {
   background-color: #b85390;
   color: white;
@@ -67,6 +71,7 @@ nav {
   outline: none;
 }
 
+/* -------------------- Carrusel -------------------- */
 .carrusel {
   margin: 2rem auto;
   max-width: 900px;
@@ -105,7 +110,7 @@ nav {
   font-size: 1.2rem;
 }
 
-/* El resto de tu CSS sigue igual */
+/* -------------------- Promo del Mes -------------------- */
 .promo-mes {
   max-width: 900px;
   margin: 3rem auto;
@@ -115,23 +120,31 @@ nav {
   box-shadow: 0 3px 10px rgba(163, 67, 170, 0.2);
   display: block;
 }
+
 .promo-mes h2 {
   text-align: center;
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
+
 .promo-mes article {
   display: flex;
   gap: 2rem;
   align-items: center;
   flex-wrap: wrap;
 }
+
 .promo-mes img {
   border-radius: 12px;
   max-width: 300px;
   flex: 1 1 300px;
   margin-top: -50px;
+  transition: transform 0.4s ease;
+}
+.promo-mes img:hover {
+  transform: scale(1.05);
 }
 
 .producto-info {
@@ -141,12 +154,14 @@ nav {
 .producto-info h3 {
   margin-top: 0;
   font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 .producto-info p {
   font-size: 1rem;
   line-height: 1.5;
 }
 
+/* -------------------- Reservación -------------------- */
 .reservacion {
   max-width: 600px;
   height: 550px;
@@ -156,6 +171,7 @@ nav {
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
+
 .reservacion h2 {
   text-align: center;
   font-weight: 700;
@@ -163,6 +179,7 @@ nav {
   color: #fff;
 }
 
+/* Formulario */
 form {
   display: grid;
   gap: 1rem;
@@ -175,7 +192,9 @@ label {
   font-weight: 600;
   font-size: 0.95rem;
 }
-input {
+
+input,
+select {
   padding: 7px 10px;
   border: 2px solid #b85390;
   border-radius: 8px;
@@ -186,9 +205,11 @@ input {
   transition: border-color 0.3s ease;
 }
 
-input:focus {
-  border-color: #ffaf00;
+input:focus,
+select:focus {
+  border-color: #f697fa;
 }
+
 button[type="submit"] {
   background-color: #b85390;
   color: white;
@@ -202,12 +223,14 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
   width: 100%;
 }
+
 button[type="submit"]:hover,
 button[type="submit"]:focus {
   background-color: #b85390;
   outline: none;
 }
 
+/* -------------------- Footer -------------------- */
 footer {
   background-color: #b85390;
   color: #faf9f7;
@@ -217,44 +240,50 @@ footer {
   flex-wrap: wrap;
   gap: 2rem;
 }
+
 .footer-section {
   min-width: 200px;
 }
+
 .footer-section h3 {
   border-bottom: 1.5px solid #b85390;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
+
 .footer-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .footer-section li {
   margin-bottom: 0.8rem;
+}
 
 .footer-section ul li a i {
   margin-right: 8px;
-  color: #fff; 
+  color: #fff;
   vertical-align: middle;
   font-size: 1.1rem;
 }
 
-}
 .footer-section a {
   color: #faf9f8;
   transition: color 0.3s ease;
 }
+
 .footer-section a:hover,
 .footer-section a:focus {
   color: #fffefd;
   outline: none;
 }
 
-.error{
+/* -------------------- Errores -------------------- */
+.error {
   outline: 1px rgb(248, 157, 172) solid;
-  background-color: #e30c8d;
+  background-color: #ad3c80;
   display: flex;
   align-items:  center;
   color: white;
