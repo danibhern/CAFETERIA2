@@ -11,20 +11,45 @@
   <nav>
     <div class="barra-nav">
       <div class="logo"></div>
-      <img src="images/nebula.png" alt="nebula" />
+      <img src="images/nebula.png" alt="nebula">
       <div class="nav-links">
         <a href="#">Home</a>
         <a href="#">Quienes Somos</a>
         <a href="menu-nebula.pdf" target="_blank" rel="noopener noreferrer">Menú</a>
+        
         <a href="#">Pedidos</a>
       </div>
     </div>
     <a href="inicio_sesion.html"><button class="boton-login">Iniciar sesión</button></a>
   </nav>
 
-  <section class="reservacion">
-    <h2>Reserva tu Mesa</h2>
-    <form action="#" id="form">
+  <section class="carrusel">
+    <div class="carrusel-imagenes">
+      <img src="https://solnatural.bio/views/img/recipesphotos/215.jpg" alt="Latte art" />
+      <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2018/03/294127-tazas-cafe-recomendables-dia.jpg?tf=3840x" alt="Taza de café" />
+      <img src="https://tofuu.getjusto.com/orioneat-prod/SLGgKeofnc2L9mY7K-Foto%20mix%20de%20dulce.JPG " alt="Granos de café" />
+
+    </div>
+    <div class="carrusel-control">
+      <button class="carousel-button" id="prev">&#10094;</button>
+      <button class="carousel-button" id="next">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="promo-mes">
+    <h2>Promo del Mes</h2>
+    <article>
+      <img src="https://template.canva.com/EAE7TAO6TzU/3/0/1600w-eix57AHCv_k.jpg" alt="Producto del mes: Espresso" />
+      <div class="producto-info">
+        <h3>Espresso Tradicional</h3>
+        <p>Disfruta un espresso intenso, hecho con granos 100% arábica, perfectamente tostados para un sabor profundo y aroma irresistible.</p>
+      </div>
+    </article>
+  </section>
+
+   <section class="reservacion">
+      <h2>Reserva tu Mesa</h2>
+      <form action="#" id="form">
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" required />
 
@@ -44,18 +69,17 @@
         <option value="10:00">10:00 AM</option>
         <option value="11:00">11:00 AM</option>
         <option value="12:00">12:00 PM</option>
-        <option value="13:00">13:00 PM</option>
-        <option value="14:00">14:00 PM</option>
-        <option value="15:00">15:00 PM</option>
-        <option value="16:00">16:00 PM</option>
-        <option value="17:00">17:00 PM</option>
+        <option value="13:00">01:00 PM</option>
+        <option value="14:00">02:00 PM</option>
+        <option value="15:00">03:00 PM</option>
+        <option value="16:00">04:00 PM</option>
+        <option value="17:00">05:00 PM</option>
       </select>
-
-      <button type="submit">Reservar</button>
-    </form>
-    <div id="errores"></div>
-    <script src="functions_reserva.js"></script>
-  </section>
+        <button type="submit">Reservar</button>
+          </form>
+          <div id="errores"></div>
+          <script src="functions_reserva.js"></script>
+    </section>
 
   <footer>
     <div class="footer-section">

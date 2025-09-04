@@ -74,7 +74,7 @@ nav {
 /* -------------------- Carrusel -------------------- */
 .carrusel {
   margin: 2rem auto;
-  max-width: 900px;
+  max-width: 950px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -127,6 +127,12 @@ nav {
   margin-bottom: 1.5rem;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.promo-mes:hover {
+  box-shadow: 0 8px 20px rgba(163, 67, 170, 0.5);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
 }
 
 .promo-mes article {
@@ -183,9 +189,9 @@ nav {
 form {
   display: grid;
   gap: 1rem;
-  max-width: 100%;
+  max-width: 80%;
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
 }
 
 label {
@@ -210,7 +216,7 @@ select:focus {
   border-color: #f697fa;
 }
 
-button[type="submit"] {
+.reservacion button[type="submit"] {
   background-color: #b85390;
   color: white;
   font-weight: 700;
@@ -220,13 +226,15 @@ button[type="submit"] {
   margin-top: 20px;
   border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   width: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-button[type="submit"]:hover,
-button[type="submit"]:focus {
-  background-color: #b85390;
+.reservacion button[type="submit"]:hover,
+.reservacion button[type="submit"]:focus {
+  background-color: #bf729e;
+  box-shadow: 0 10px 20px rgba(222, 71, 207, 0.6);
+  transform: translateY(-3px);
   outline: none;
 }
 
