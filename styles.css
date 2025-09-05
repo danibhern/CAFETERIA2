@@ -170,7 +170,7 @@ nav {
 /* -------------------- Reservación -------------------- */
 .reservacion {
   max-width: 600px;
-  height: 550px;
+  height: 650px;
   margin: 2rem auto;
   padding: 1.5rem 2rem;
   background-color: #b788bd;
@@ -292,7 +292,9 @@ footer {
 .error {
   outline: 1px rgb(248, 157, 172) solid;
   background-color: #ad3c80;
+}
+
+#errores p{
   display: flex;
-  align-items:  center;
   color: white;
 }
