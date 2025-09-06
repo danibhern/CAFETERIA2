@@ -69,6 +69,7 @@ nav {
   border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  
 }
 .boton-login:hover,
 .boton-login:focus {
@@ -94,10 +95,10 @@ main {
 }
 
 .profile-photo {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  border: 3px solid #ffaf00;
+  border: 3px solid #f781de;
   object-fit: cover;
   margin: 0 auto 1rem auto;
   display: block;
@@ -143,6 +144,7 @@ button[type="submit"]{
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
 
 button[type="submit"]:hover,
@@ -235,6 +237,8 @@ footer .footer-section ul li a:focus {
   margin-bottom: 0.8rem;
 }
 
+
+
 .footer-section ul li a  {
   margin-right: 8px;
   vertical-align: middle;
@@ -245,4 +249,8 @@ footer .footer-section ul li a:focus {
 
 .footer-section a {
   transition: color 0.3s ease;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.4); /* blanco con 50% de opacidad */
 }
