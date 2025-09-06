@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil de Usuario - Cafetería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="barra-nav">
+        <img src="images/logo.png" alt="Logo Cafetería" />
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="productos.html">Productos</a>
+          <a href="perfil.html" aria-current="page">Perfil</a>
+          <a href="contacto.html">Contacto</a>
+          <button class="boton-login">Cerrar sesión</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="profile-header">
+      <img src="images/user-default.png" alt="Foto de perfil" class="profile-photo" title="Haz clic para cambiar tu foto"/>
+      <h1>Hola, María</h1>
+      <p>Gestiona tu perfil y preferencias de cuenta</p>
+    </section>
+    <form id="profileForm" action="#" method="post">
+      <label for="name">Nombre completo</label>
+      <input id="name" name="name" type="text" value="María Pérez" required />
+      
+      <label for="email">Correo electrónico</label>
+      <input id="email" name="email" type="email" value="maria@example.com" required />
+      
+      <label for="phone">Teléfono</label>
+      <input id="phone" name="phone" type="text" value="+56 9 1234 5678" />
+      
+      <label for="password">Contraseña nueva</label>
+      <input id="password" name="password" type="password" placeholder="Dejar vacío para no cambiar" />
+      
+      <label for="preferences">Preferencias</label>
+      <select id="preferences" name="preferences">
+        <option value="cafe" selected>Café</option>
+        <option value="pasteleria">Pastelería</option>
+        <option value="bebidas">Bebidas</option>
+      </select>
+      
+      <button type="submit">Guardar Cambios</button>
+    </form>
+    <div class="message" id="profileMessage"></div>
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <h3>Contacto</h3>
+      <ul>
+        <li>Email: contacto@cafeteria.com</li>
+        <li>Teléfono: +56 9 1234 5678</li>
+        <li>Dirección: Calle Dulce 123, Santiago</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Síguenos</h3>
+      <ul>
+        <li><a href="#" aria-label="Facebook">Facebook</a></li>
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="Twitter">Twitter</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Nosotros</h3>
+      <ul>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="blog.html">Blog de Café</a></li>
+        <li><a href="privacidad.html">Política de Privacidad</a></li>
+      </ul>
+    </div>
+    <p>&copy; 2025 Cafetería Nebula</p>
+  </footer>
+
+</body>
+</html>
