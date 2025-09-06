@@ -89,3 +89,20 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarContadorIcono();
     renderCarrito();
 });
+function buscar() {
+    let input = document.getElementById("input-busqueda").value.toLowerCase();
+
+    // Seleccionamos todos los productos e insumos
+    let items = document.querySelectorAll(".producto, .insumo");
+
+    items.forEach(item => {
+        let nombre = item.getAttribute("data-nombre").toLowerCase();
+        
+        // Si coincide el texto, se muestra; si no, se oculta
+        if (nombre.includes(input)) {
+        item.style.display = "flex"; // o "block", según tu CSS
+        } else {
+        item.style.display = "none";
+        }
+    });
+}

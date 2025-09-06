@@ -25,8 +25,13 @@
         <a href="carrito.html">Ver Carrito</a>
     </div>
     </nav>
-        <div id="container">
+    <div class="barra-busqueda">
+        <input type="text" id="input-busqueda" placeholder="Buscar..." onkeyup="buscar()">
+        <button onclick="buscar()">🔍</button>
+    </div>
+    <div id="container">
         <h1>Pedidos de Café</h1>
+
         <!-- Productos Café -->
         <div class="producto" data-nombre="Café Daroma" data-precio="5890">
             <div class="img">

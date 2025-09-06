@@ -120,6 +120,27 @@ nav {
     color: #fff;
 }
 
+.barra-busqueda{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+.barra-busqueda input{
+    width: 20%; 
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+}
+.barra-busqueda button{
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #b788bd;
+    cursor: pointer;
+}
 
 .producto{
     background-color: #b788bd;
