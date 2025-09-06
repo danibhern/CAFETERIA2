@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestión de Usuarios - Cafetería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="gestion_usuarios.css" />
+</head>
+<body>
+  <header>
+    <h1>Gestión de Usuarios</h1>
+  </header>
+  <main>
+    <section class="user-list">
+      <h2>Lista de Usuarios</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí seran filas dinámicas por usuarios -->
+          <tr>
+            <td>María Pérez</td>
+            <td>maria@example.com</td>
+            <td>Cliente</td>
+            <td>
+              <button class="btn edit">Editar</button>
+              <button class="btn delete">Eliminar</button>
+            </td>
+          </tr>
+          <!-- aqui pondre mas usuarios inventandolos -->
+        </tbody>
+      </table>
+    </section>
+    <section class="user-form">
+      <h2>Agregar / Modificar Usuario</h2>
+      <form id="userForm">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" name="nombre" type="text" required />
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="rol">Rol:</label>
+        <select id="rol" name="rol" required>
+          <option value="cliente">Cliente</option>
+          <option value="administrador">Administrador</option>
+          <option value="empleado">Empleado</option>
+        </select>
+
+        <button type="submit" class="btn submit">Guardar</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <footer>
+  <div class="footer-section">
+    <h3>Redes Sociales</h3>
+    <ul>
+      <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+      <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
+      <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h3>Sucursales</h3>
+    <ul>
+      <li><i class="fas fa-map-marker-alt"></i> Serrano 123, Melipilla</li>
+      <li><i class="fas fa-map-marker-alt"></i> Avenida Central 456, Villarica</li>
+      <li><i class="fas fa-map-marker-alt"></i> Avenida Central 456, Villarica</li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h3>Políticas</h3>
+    <ul>
+      <li><a href="#"><i class="fas fa-file-alt"></i> Políticas de Envío</a></li>
+      <li><a href="#"><i class="fas fa-shield-alt"></i> Términos y Condiciones</a></li>
+    </ul>
+  </div>
+  <p>&copy; 2025 Cafetería Nebula</p>
+</footer>
+
+</body>
+</html>
