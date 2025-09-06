@@ -13,7 +13,7 @@ a {
 
 /* -------------------- Navegación -------------------- */
 nav {
-  background: linear-gradient(90deg, #b85390, #b788bd);
+  background: linear-gradient(90deg, #b788bd, #b85390);  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,7 +55,7 @@ nav {
 }
 
 .boton-login {
-  background-color: #b85390;
+  background-color: #b788bd;
   color: white;
   font-weight: 700;
   padding: 8px 16px;
@@ -77,7 +77,7 @@ nav {
   max-width: 965px;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.25);
   max-height: 300px;
   position: relative;
 }
@@ -98,17 +98,7 @@ nav {
   text-align: center;
   margin-top: 0.7rem;
 }
-.carousel-button {
-  cursor: pointer;
-  border: none;
-  background: #b85390;
-  color: white;
-  padding: 6px 14px;
-  margin: 0 9px;
-  border-radius: 6px;
-  margin-top: 10px;
-  font-size: 1.2rem;
-}
+
 
 /* -------------------- Promo del Mes -------------------- */
 .promo-mes {
@@ -192,7 +182,6 @@ form {
   max-width: 80%;
   margin: 0 auto;
   width: 80%;
-
 }
 
 label {
@@ -242,7 +231,7 @@ select:focus {
 /* -------------------- Footer -------------------- */
 footer {
   background-color: #b85390;
-  color: #faf9f7;
+  color: #f0eee9;
   display: flex;
   justify-content: space-around;
   padding: 2rem;
@@ -259,6 +248,24 @@ footer {
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  color: #ffffff; /* mantengo blanco */
+}
+
+/* Cambio de color para ul, li, i y a en footer */
+footer .footer-section ul li,
+footer .footer-section ul li a,
+footer .footer-section ul li i {
+  color: #e1cdda; /* color alternativo */
+}
+
+footer .footer-section ul li a {
+  color: #f0d9e8;
+}
+
+footer .footer-section ul li a:hover,
+footer .footer-section ul li a:focus {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .footer-section ul {
@@ -273,24 +280,13 @@ footer {
 
 .footer-section ul li a  {
   margin-right: 8px;
-  color: #fff;
   vertical-align: middle;
   font-size: 1.1rem;
   min-width: 20px;
 }
 
 .footer-section a {
-  color: #faf9f8;
   transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-.footer-section a:focus {
-  color: #fffefd;
-  outline: none;
 }
 
 /* -------------------- Errores -------------------- */
