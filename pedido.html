@@ -12,7 +12,7 @@
         <div class="logo"></div>
         <img src="images/nebula.png" alt="nebula">
         <div class="nav-links">
-            <a href="#">Home</a>
+            <a href="index.html">Home</a>
             <a href="#">Quienes Somos</a>
             <a href="menu-nebula.pdf" target="_blank" rel="noopener noreferrer">Menú</a>
             
@@ -29,6 +29,12 @@
         <input type="text" id="input-busqueda" placeholder="Buscar..." onkeyup="buscar()">
         <button onclick="buscar()">🔍</button>
     </div>
+        <div class="filtro-precio">
+        <input type="number" id="precio-min" placeholder="Precio mínimo">
+        <input type="number" id="precio-max" placeholder="Precio máximo">
+        <button onclick="filtrarPorPrecio()">Filtrar</button>
+    </div>
+
     <div id="container">
         <h1>Pedidos de Café</h1>
 

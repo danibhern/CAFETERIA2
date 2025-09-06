@@ -141,6 +141,29 @@ nav {
     background-color: #b788bd;
     cursor: pointer;
 }
+.filtro-precio{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1px;
+}
+
+.filtro-precio input{
+    width: 8%;
+    height: 20%;
+    padding: 4px;
+    border: none;
+    margin: 4px;
+    border-radius: 8px;
+}
+.filtro-precio button{
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: #b788bd;
+    cursor: pointer;
+    margin-right: 24px;
+}
 
 .producto{
     background-color: #b788bd;
