@@ -151,6 +151,41 @@ button[type="submit"]:focus {
   outline: none;
 }
 
+fieldset {
+  border: 2px solid #b85390;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-top: 1.5rem;
+  color: white;
+  font-weight: 600;
+}
+
+fieldset legend {
+  padding: 0 10px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+fieldset > label {
+  margin-right: 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+fieldset > label input[type="radio"] {
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+
+
+fieldset {
+  display: flex;
+  align-items: center;
+  gap: 2rem; 
+}
+
 footer {
   background-color: #b85390;
   color: #f0eee9;
@@ -170,7 +205,7 @@ footer {
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  color: #ffffff; /* mantengo blanco */
+  color: #ffffff; 
 }
 
 footer .footer-section ul li,
@@ -186,7 +221,7 @@ footer .footer-section ul li a {
 footer .footer-section ul li a:hover,
 footer .footer-section ul li a:focus {
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer-section ul {

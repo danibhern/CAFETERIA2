@@ -6,6 +6,8 @@
   <title>Perfil de Usuario - Cafetería</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="perfil.css" />
+  <!-- CDN Font Awesome para iconos sociales -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -23,9 +25,10 @@
     </nav>
   </header>
 
+
   <main>
     <section class="profile-header">
-      <img src="images/user-default.png" alt="Foto de perfil" class="profile-photo" title="Haz clic para cambiar tu foto"/>
+      <img src="https://us.123rf.com/450wm/seregraff/seregraff1703/seregraff170300233/74749786-portrait-of-pure-white-cat-with-odd-eyes-on-isolated-background.jpg" alt="Foto de perfil" class="profile-photo" title="Haz clic para cambiar tu foto"/>
       <h1>Hola, Aria</h1>
       <p>Gestiona tu perfil y preferencias de cuenta</p>
     </section>
@@ -48,27 +51,38 @@
         <option value="pasteleria">Pastelería</option>
         <option value="bebidas">Bebidas</option>
       </select>
+
+      <fieldset>
+        <legend>¿Deseas recibir nuestras promociones y novedades?</legend>
+        <label>
+          <input type="radio" name="promociones" value="si" required /> Sí
+        </label>
+        <label>
+          <input type="radio" name="promociones" value="no" /> No
+        </label>
+      </fieldset>
       
       <button type="submit">Guardar Cambios</button>
     </form>
     <div class="message" id="profileMessage"></div>
   </main>
 
+
   <footer>
     <div class="footer-section">
       <h3>Contacto</h3>
       <ul>
-        <li>Email: nebula@cafeteria.com</li>
-        <li>Teléfono: +56 9 83473942</li>
-        <li>Dirección: Calle Serrano 123, Melipilla</li>
+        <li><i class="fas fa-envelope"></i> nebula@cafeteria.com</li>
+        <li><i class="fas fa-phone"></i> +56 9 83473942</li>
+        <li><i class="fas fa-map-marker-alt"></i> Calle Serrano 123, Melipilla</li>
       </ul>
     </div>
     <div class="footer-section">
       <h3>Síguenos</h3>
-      <ul>
-        <li><a href="#" aria-label="Facebook">Facebook</a></li>
-        <li><a href="#" aria-label="Instagram">Instagram</a></li>
-        <li><a href="#" aria-label="Twitter">Twitter</a></li>
+      <ul class="social-icons">
+        <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
       </ul>
     </div>
     <div class="footer-section">
@@ -81,6 +95,7 @@
     </div>
     <p>&copy; 2025 Cafetería Nebula</p>
   </footer>
+
 
 </body>
 </html>
