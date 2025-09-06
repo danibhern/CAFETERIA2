@@ -54,6 +54,7 @@ nav {
     padding: 4px 8px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 .nav-links a:hover,
 .nav-links a:focus {
@@ -195,7 +196,7 @@ footer .footer-section ul li a {
 footer .footer-section ul li a:hover,
 footer .footer-section ul li a:focus {
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer-section ul {
