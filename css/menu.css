@@ -1,11 +1,12 @@
 html, body {
   height: 100%;
-  margin: 0; padding: 0;
+  margin: 0; 
+  padding: 0;
   background-image:
     repeating-linear-gradient(
       to bottom,
-      rgba(285, 285, 285, 0.05),
-      rgba(285, 285, 285, 0.05) 3px,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.05) 3px,
       transparent 4px,
       transparent 14px
     ),
@@ -15,30 +16,97 @@ html, body {
   background-position: center center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* Permitimos scroll solo en y, no centramos contenido para que nav esté arriba */
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
 }
 
+nav {
+  background: linear-gradient(90deg, #b788bd, #b85390);  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 2rem;
+  height: 70px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  position: sticky;    /* barra fija al top al hacer scroll */
+  top: 0;
+  z-index: 10;
+}
+
+.barra-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.barra-nav img {
+  max-height: 140px; 
+  width: auto;      
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.boton-login {
+  background-color: #b788bd;
+  color: white;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-login:hover,
+.boton-login:focus {
+  background-color: #ffaf00;
+  color: #fff;
+  outline: none;
+}
+
+/* Contenedor del PDF, con margen para dejar espacio para la barra fija */
 .pdf-container {
-  width: 80vw;
-  height: 85vh;
+  width: 60vw;       
+  height: 80vh;      
   background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 0px;
+  border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;                
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
 
-iframe {
-  border: none;
+.pdf-container embed {
   width: 100%;
   height: 100%;
-  max-width: 900px; 
-  max-height: 1100px;
-  transform: scale(0.8);
-  transform-origin: top left;
-  box-shadow: 0 0 8px rgba(0,0,0,0.25);
-  border-radius: 10px;
   display: block;
+  border-radius: 10px;
 }
