@@ -1,28 +1,34 @@
 body, html {
-    margin: 0; padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:  #e3c0d5;
-    color: #4a2542;
+  margin: 0; padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(285, 285, 285, 0.05), 
+      rgba(285, 285, 285, 0.05) 3px, 
+      transparent 4px,
+      transparent 14px 
+    ),
+    linear-gradient(135deg, #e3c0d5 0%, #bb8fca 100%);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: center center;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
 
 nav {
-  background: linear-gradient(90deg, #b85390, #b788bd);
+  background: linear-gradient(90deg, #b788bd, #b85390);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.3rem 2rem;
   height: 70px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(184, 83, 144, 0.4);
   position: sticky;
   top: 0;
   z-index: 10;
 }
-
 
 .barra-nav {
     display: flex;
@@ -34,7 +40,7 @@ nav {
     max-height: 140px; 
     width: auto;      
     display: block;  
-    margin-right: 20px; /* Para mejor control */
+    margin-right: 20px; 
 }
 
 .nav-links {
@@ -53,8 +59,9 @@ nav {
 .nav-links a:focus {
     background-color: rgba(255, 255, 255, 0.25);
 }
+
 .boton-login {
-    background-color: #b85390;
+    background-color: #b788bd;
     color: white;
     font-weight: 700;
     padding: 8px 16px;
@@ -82,7 +89,7 @@ nav {
     margin: 10rem auto;
     margin-bottom: 190px;
     border-radius: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 25px rgba(184, 83, 144, 0.3);
     box-sizing: border-box;
 }
 
@@ -99,7 +106,7 @@ nav {
 }
 
 .links-container a {
-  color: #fff;
+  color: #f5d1e4;
   text-decoration: underline;
   font-weight: 600;
   font-size: 0.9rem;
@@ -112,7 +119,6 @@ nav {
   color: #e49fdd;
   outline: none;
 }
-
 
 form{
     display: grid;
@@ -133,12 +139,14 @@ input{
     outline-offset: 2px;
     width: 100%;
     box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button[type="submit"]{
     background-color: #b85390;
     color: white;
     font-weight: 700;
+    font-size: 1rem;
     border: none;
     padding: 10px;
     border-radius: 20px;
@@ -153,38 +161,60 @@ button[type="submit"]:focus {
 }
 
 footer {
-    background-color: #b85390;
-    color: #faf9f7;
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-.footer-section {
-    min-width: 200px;
-}
-.footer-section h3 {
-    border-bottom: 1.5px solid #b85390;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.footer-section li {
-    margin-bottom: 0.8rem;
-}
-.footer-section a {
-    color: #faf9f8;
-    transition: color 0.3s ease;
-}
-.footer-section a:hover,
-.footer-section a:focus {
-    color: #fffefd;
-    outline: none;
+  background-color: #b85390;
+  color: #f0eee9;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
+.footer-section {
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  border-bottom: 1.5px solid #b85390;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #ffffff; /* mantengo blanco */
+}
+
+footer .footer-section ul li,
+footer .footer-section ul li a,
+footer .footer-section ul li i {
+  color: #e1cdda; 
+}
+
+footer .footer-section ul li a {
+  color: #f0d9e8;
+}
+
+footer .footer-section ul li a:hover,
+footer .footer-section ul li a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a  {
+  margin-right: 8px;
+  vertical-align: middle;
+  font-size: 1.1rem;
+  min-width: 20px;
+}
+
+.footer-section a {
+  transition: color 0.3s ease;
+}
