@@ -90,8 +90,8 @@ nav {
   margin: 10rem auto;
   margin-bottom: 190px;
   border-radius: 15px;
-  box-shadow: 0 15px 25px rgba(184, 83, 144, 0.3);
   box-sizing: border-box;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 #container > h1 {
