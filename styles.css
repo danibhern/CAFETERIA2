@@ -251,11 +251,10 @@ footer {
   color: #ffffff; /* mantengo blanco */
 }
 
-/* Cambio de color para ul, li, i y a en footer */
 footer .footer-section ul li,
 footer .footer-section ul li a,
 footer .footer-section ul li i {
-  color: #e1cdda; /* color alternativo */
+  color: #e1cdda; 
 }
 
 footer .footer-section ul li a {
