@@ -1,139 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pedido</title>
-    <link rel="stylesheet" href="css/estilo_pedido.css">
+    <link rel="stylesheet" href="css/estilo_pedido.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
 </head>
 <body>
     <nav>
-    <div class="barra-nav">
-        <div class="logo"></div>
-        <img src="images/nebula.png" alt="nebula">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#">Quienes Somos</a>
-            <a href="menu-nebula.pdf" target="_blank" rel="noopener noreferrer">Menú</a>
-            
-            <a href="pedido.html">Pedidos</a>
-        </div>
+        <div class="barra-nav">
+            <div class="logo"></div>
+            <img src="images/nebula.png" alt="nebula" />
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Quienes Somos</a>
+                <a href="menu-nebula.pdf" target="_blank" rel="noopener noreferrer">Menú</a>
+                <a href="pedido.html">Pedidos</a>
+            </div>
         </div>
         <a href="inicio_sesion.html"><button class="boton-login">Iniciar sesión</button></a>
         <div id="carrito-icono">
-        🛒 <span id="contador">0</span>
-        <a href="carrito.html">Ver Carrito</a>
-    </div>
+            🛒 <span id="contador">0</span>
+            <a href="carrito.html">Ver Carrito</a>
+        </div>
     </nav>
     <div class="barra-busqueda">
-        <input type="text" id="input-busqueda" placeholder="Buscar..." onkeyup="buscar()">
+        <input type="text" id="input-busqueda" placeholder="Buscar..." onkeyup="buscar()" />
         <button onclick="buscar()">🔍</button>
     </div>
     <div class="filtro-precio">
         <input type="number" id="precio-min" placeholder="Precio mínimo">
-        <input type="number" id="precio-max" placeholder="Precio máximo">
+        <input type="number" id="precio-max" placeholder="Precio máximo"
         <button onclick="filtrarPorPrecio()">Filtrar</button>
     </div>
     <div id="container">
         <h1>Pedidos de Café</h1>
 
-        <!-- Productos Café -->
+        
         <div class="producto" data-nombre="Café Daroma" data-precio="5890">
-            <div class="img">
-                <img src="https://focusmood.coffee/cl/wp-content/uploads/2024/08/Envase-Arabico-Negro-1-600x450.png" alt="">
-            </div>
-            <div class="text">
-                <h3>Café Daroma</h3>
-                <h5>Cafe en grano 250g</h5>
-                <p>$5.890</p>
-                <button class="agregar">Añadir al carrito</button>
-            </div>
+            <div class="img"><img src="https://focusmood.coffee/cl/wp-content/uploads/2024/08/Envase-Arabico-Negro-1-600x450.png" alt="Café Daroma" /></div>
+            <div class="text"><h3>Café Daroma</h3><h5>Café en grano 250g</h5><p>$5.890</p><button class="agregar">Añadir al carrito</button></div>
         </div>
-
         <div class="producto" data-nombre="Manuel Caffe" data-precio="10000">
-            <div class="img">
-                <img src="https://manuelcaffe.cl/wp-content/uploads/2025/01/DOIPACK-Armonia_A_62e3ceb6-e998-47a6-b1ca-77804ae85a4e.png" alt="">
-            </div>
-            <div class="text">
-                <h3>Manuel Caffe</h3>
-                <h5>Café molido 500g</h5>
-                <p>$10.000</p>
-                <button class="agregar">Añadir al carrito</button>
-            </div>
+            <div class="img"><img src="https://manuelcaffe.cl/wp-content/uploads/2025/01/DOIPACK-Armonia_A_62e3ceb6-e998-47a6-b1ca-77804ae85a4e.png" alt="Manuel Caffe" /></div>
+            <div class="text"><h3>Manuel Caffe</h3><h5>Café molido 500g</h5><p>$10.000</p><button class="agregar">Añadir al carrito</button></div>
         </div>
-
         <div class="producto" data-nombre="Café Nestle Bonka" data-precio="10000">
-            <div class="img">
-                <img src="https://comercialboncafe.com/wp-content/uploads/2025/03/3D-BONKA_ECONOCMY_delizzia.png" alt="">
-            </div>
-            <div class="text">
-                <h3>Café Nestle Bonka</h3>
-                <h5>Café en grano 250g</h5>
-                <p>$10.000</p>
-                <button class="agregar">Añadir al carrito</button>
-            </div>
+            <div class="img"><img src="https://comercialboncafe.com/wp-content/uploads/2025/03/3D-BONKA_ECONOCMY_delizzia.png" alt="Café Nestle Bonka" /></div>
+            <div class="text"><h3>Café Nestle Bonka</h3><h5>Café en grano 250g</h5><p>$10.000</p><button class="agregar">Añadir al carrito</button></div>
         </div>
-
         <div class="producto" data-nombre="Britt" data-precio="15000">
-            <div class="img">
-                <img src="http://cafebritt.com/cdn/shop/files/costa-rican-chocolate-milk-chocolate-covered-coffee-beans-12oz-front-view.webp?v=1700684501" alt="">
-            </div>
-            <div class="text">
-                <h3>Britt</h3>
-                <h5>Café y chocolate 170g</h5>
-                <p>$15.000</p>
-                <button class="agregar">Añadir al carrito</button>
-            </div>
+            <div class="img"><img src="http://cafebritt.com/cdn/shop/files/costa-rican-chocolate-milk-chocolate-covered-coffee-beans-12oz-front-view.webp?v=1700684501" alt="Britt" /></div>
+            <div class="text"><h3>Britt</h3><h5>Café y chocolate 170g</h5><p>$15.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Colombia Supremo" data-precio="7500">
+            <div class="img"><img src="https://copantrade.com/cdn/shop/products/COLOMBIASUPREMOCT25LB2022.png?v=1661204758" alt="Café Colombia Supremo" /></div>
+            <div class="text"><h3>Café Colombia Supremo</h3><h5>Café molido 250g</h5><p>$7.500</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Italiano" data-precio="12000">
+            <div class="img"><img src="https://www.boncafeme.ae/cdn/shop/files/BC_CafeItaliano_818x900_3918ed7f-e3be-4318-96f5-5cd6c9d5a345.png?v=1743064470&width=1024" alt="Café Italiano" /></div>
+            <div class="text"><h3>Café Italiano</h3><h5>Café en grano 500g</h5><p>$12.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Lavazza" data-precio="11000">
+            <div class="img"><img src="https://multicoffee.es/wp-content/uploads/moido_lavazza_espresso.png" alt="Café Lavazza" /></div>
+            <div class="text"><h3>Café Lavazza</h3><h5>250g Molido</h5><p>$11.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Starbucks Pike Place" data-precio="13000">
+            <div class="img"><img src="https://www.starbucksathome.com/br/media/catalog/product/cache/9c1eb70e7429d8d789faa4b8fa4e43c6/p/i/pike-place-1772x1772.png" alt="Café Starbucks Pike Place" /></div>
+            <div class="text"><h3>Café Starbucks Pike Place</h3><h5>500g Grano</h5><p>$13.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Illy Classico" data-precio="12500">
+            <div class="img"><img src="https://www.illy.com/dw/image/v2/BBDD_PRD/on/demandware.static/-/Sites-masterCatalog_illycaffe/default/dwdbad6504/products/sfra/coffee/Medium2x/I0003885_Medium_2x_01.png?q=75" alt="Café Illy Classico" /></div>
+            <div class="text"><h3>Café Illy Classico</h3><h5>250g Molido</h5><p>$12.500</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Peet's Coffee" data-precio="11500">
+            <div class="img"><img src="https://www.peets.com/cdn/shop/products/CDO-M_1.png?v=1748531168" alt="Café Peet's Coffee" /></div>
+            <div class="text"><h3>Café Peet's Coffee</h3><h5>250g Molido</h5><p>$11.500</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Kona" data-precio="18000">
+            <div class="img"><img src="https://cdn11.bigcommerce.com/s-9wlsnri4bn/images/stencil/1280x1280/products/153/1295/Kona100_FIN2_privateWB__06403.1736997662.png?c=1" alt="Café Kona" /></div>
+            <div class="text"><h3>Café Kona</h3><h5>500g Grano</h5><p>$18.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Blue Mountain" data-precio="22000">
+            <div class="img"><img src="https://www.jacoffee.com/cdn/shop/products/JBMBlend454g_grande.png?v=1675693396" alt="Café Blue Mountain" /></div>
+            <div class="text"><h3>Café Blue Mountain</h3><h5>250g Molido</h5><p>$22.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Etiopía Sidamo" data-precio="17000">
+            <div class="img"><img src="https://cafescamali.com/wp-content/uploads/2016/02/Etiopia-Sidamo-Molido-250g.png" alt="Café Etiopía Sidamo" /></div>
+            <div class="text"><h3>Café Etiopía Sidamo</h3><h5>250g Molido</h5><p>$17.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Guatemala Antigua" data-precio="16000">
+            <div class="img"><img src="https://www.cafegeisha.es/cdn/shop/products/CafeGuatemalaAntiguaengrano1_460x@2x.png?v=1642007458" alt="Café Guatemala Antigua" /></div>
+            <div class="text"><h3>Café Guatemala Antigua</h3><h5>500g Grano</h5><p>$16.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Sumatra" data-precio="15000">
+            <div class="img"><img src="https://storage.googleapis.com/incapto-production-web-storage/wp-content/uploads/2020/03/1200x1200x_sumatra.png" alt="Café Sumatra" /></div>
+            <div class="text"><h3>Café Sumatra</h3><h5>250g Molido</h5><p>$15.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Brasil Santos" data-precio="14000">
+            <div class="img"><img src="https://upcafe.pl/wp-content/uploads/2020/08/brasil_santos_kopia.png" alt="Café Brasil Santos" /></div>
+            <div class="text"><h3>Café Brasil Santos</h3><h5>500g Grano</h5><p>$14.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Yemen Mocha" data-precio="19000">
+            <div class="img"><img src="https://static.wixstatic.com/media/296099_36a5771a1bde4bfaa10b8bbe7bae8fbe~mv2.png/v1/fill/w_520,h_780,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/296099_36a5771a1bde4bfaa10b8bbe7bae8fbe~mv2.png" alt="Café Yemen Mocha" /></div>
+            <div class="text"><h3>Café Yemen Mocha</h3><h5>250g Molido</h5><p>$19.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Kenya AA" data-precio="21000">
+            <div class="img"><img src="https://www.coffeebean.com/cdn/shop/files/E-Comm_CoffeeBagVisuals_16oz_131124-13.png?v=1732133578" alt="Café Kenya AA" /></div>
+            <div class="text"><h3>Café Kenya AA</h3><h5>500g Grano</h5><p>$21.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="producto" data-nombre="Café Panamá Geisha" data-precio="25000">
+            <div class="img"><img src="https://www.carasso.ch/wp-content/uploads/2025/03/2-1.png" alt="Café Panamá Geisha" /></div>
+            <div class="text"><h3>Café Panamá Geisha</h3><h5>250g Molido</h5><p>$25.000</p><button class="agregar">Añadir al carrito</button></div>
         </div>
     </div>
 
     <div id="container2">
         <h1>Insumos de Café</h1>
 
-        <!-- Productos Insumos -->
+        
         <div class="insumo" data-nombre="Kit Basico Barista" data-precio="25000">
-            <div class="im">
-                <img src="https://berlingo.com.mx/wp-content/uploads/2024/12/KIT-BARISTA-3-600x600.png" alt="">
-            </div>
-            <div class="text">
-                <h3>Kit Basico Barista</h3>
-                <p>$25.000</p>
-                <button class="agregar">Añadir al carrito</button>
-            </div>
+            <div class="im"><img src="https://berlingo.com.mx/wp-content/uploads/2024/12/KIT-BARISTA-3-600x600.png" alt="Kit Basico Barista" /></div>
+            <div class="text"><h3>Kit Basico Barista</h3><p>$25.000</p><button class="agregar">Añadir al carrito</button></div>
         </div>
-
         <div class="insumo" data-nombre="Prensa Francesa" data-precio="18000">
-            <div class="im">
-                <img src="https://www.outletdelcafe.cl/cdn/shop/files/Prensa-francesa-termometro_1.webp?v=1734096139&width=1080" alt="">
-            </div>
-            <div class="text">
-                <h3>Prensa Francesa</h3>
-                <p>$18.000</p>
-                <button class="agregar">Añadir al carrito</button>
-            </div>
+            <div class="im"><img src="https://www.outletdelcafe.cl/cdn/shop/files/Prensa-francesa-termometro_1.webp?v=1734096139&width=1080" alt="Prensa Francesa" /></div>
+            <div class="text"><h3>Prensa Francesa</h3><p>$18.000</p><button class="agregar">Añadir al carrito</button></div>
         </div>
-
         <div class="insumo" data-nombre="Jarra de 20 Oz" data-precio="10000">
-            <div class="im">
-                <img src="https://berlingo.com.mx/wp-content/uploads/2024/12/KIT-BARISTA-5-600x600.png" alt="">
-            </div>
-            <div class="text">
-                <h3>Jarra de 20 Oz</h3>
-                <p>$10.000</p>
-                <button class="agregar">Añadir al carrito</button>
-            </div>
+            <div class="im"><img src="https://berlingo.com.mx/wp-content/uploads/2024/12/KIT-BARISTA-5-600x600.png" alt="Jarra de 20 Oz" /></div>
+            <div class="text"><h3>Jarra de 20 Oz</h3><p>$10.000</p><button class="agregar">Añadir al carrito</button></div>
         </div>
-        <div class="insumo" data-nombre="Best whip" data-precio="10000">
-            <div class="im">
-                <img src="https://carsnack.cl/cdn/shop/files/BEST_WHIP_SIFON_BARISTA_PRO_1-2L.png?v=1722454363" alt="">
-            </div>
-            <div class="text">
-                <h3>best whip</h3>
-                <p>$11.000</p>
-                <button class="agregar">Añadir al carrito</button>
-            </div>
+        <div class="insumo" data-nombre="Best whip" data-precio="11000">
+            <div class="im"><img src="https://carsnack.cl/cdn/shop/files/BEST_WHIP_SIFON_BARISTA_PRO_1-2L.png?v=1722454363" alt="Best whip" /></div>
+            <div class="text"><h3>Best whip</h3><p>$11.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Molino Manual" data-precio="35000">
+            <div class="im"><img src="https://www.wearefour.cl/cdn/shop/files/3791_-_Racing_Green.png?v=1720547762&width=416" alt="Molino Manual" /></div>
+            <div class="text"><h3>Molino Manual</h3><p>$35.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Taza Cerámica" data-precio="5000">
+            <div class="im"><img src="https://sensorial.cl/wp-content/uploads/2021/09/taza-grande.png" alt="Taza Cerámica" /></div>
+            <div class="text"><h3>Taza Cerámica</h3><p>$5.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Tamper Café" data-precio="8000">
+            <div class="im"><img src="https://www.laguildeculinaire.com/cdn/shop/files/BEA302_pdp_1300px.png?v=1736441615" alt="Tamper Café" /></div>
+            <div class="text"><h3>Tamper Café</h3><p>$8.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Jarra Vaporizadora" data-precio="26000">
+            <div class="im"><img src="https://odisaequipa.com.mx/wp-content/uploads/2020/11/MOD.-WP-20.png" alt="Jarra Vaporizadora" /></div>
+            <div class="text"><h3>Jarra Vaporizadora</h3><p>$26.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Báscula de Precisión" data-precio="21000">
+            <div class="im"><img src="https://www.baxtran.com/imagecache/uploads_images_producto_precision_imatges-noves-abril-2021_720x720_c_bar-perspectiva.png" alt="Báscula de Precisión" /></div>
+            <div class="text"><h3>Báscula de Precisión</h3><p>$21.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Cepillo Limpiador" data-precio="7000">
+            <div class="im"><img src="https://www.cafecaribe.cl/cdn/shop/files/9189b3de-d153-4b76-911b-8500dad994c1_2000x.png?v=1754505028" alt="Cepillo Limpiador" /></div>
+            <div class="text"><h3>Cepillo Limpiador</h3><p>$7.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <!-- 10 insumos adicionales -->
+        <div class="insumo" data-nombre="Molinillo Eléctrico" data-precio="45000">
+            <div class="im"><img src="https://www.copacabana.com.uy/images/thumbs/0002111_molinillo-de-cafe-electrico_600.png" alt="Molinillo Eléctrico" /></div>
+            <div class="text"><h3>Molinillo Eléctrico</h3><p>$45.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Espumador de Leche" data-precio="20000">
+            <div class="im"><img src="https://hispaniolacafeshop-eu.s30.cdn-upgates.com/_cache/0/9/097a5fd7352da220c3f9837a9ea89735-milk-frother-fantasia-blu.png" alt="Bomba de Leche" /></div>
+            <div class="text"><h3>Bomba de Leche</h3><p>$20.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Porta Filtros" data-precio="9000">
+            <div class="im"><img src="https://reelec.es/91069-large_default/portafiltro-de-cafetera-saeco-996530029833.jpg" alt="Porta Filtros" /></div>
+            <div class="text"><h3>Porta Filtros</h3><p>$9.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Tazas de Café x2" data-precio="15000">
+            <div class="im"><img src="https://www.nespresso.com/ecom/medias/sys_master/public/31864827412510/ENRICH-600X6337PX-GRAN-LUNGO.png" alt="Tazas de Café" /></div>
+            <div class="text"><h3>Tazas de Café</h3><p>$15.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Cuchara Medidora" data-precio="4000">
+            <div class="im"><img src="https://gw.alicdn.com/i4/828859155/O1CN01PkX4td2HV2lCO7Zwe_!!828859155.png_540x540.jpg" alt="Cuchara Medidora" /></div>
+            <div class="text"><h3>Cuchara Medidora</h3><p>$4.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Contenedor Café" data-precio="8500">
+            <div class="im"><img src="https://png.pngtree.com/png-clipart/20241024/original/pngtree-clear-glass-jar-with-lid-png-image_16480006.png" alt="Contenedor Café" /></div>
+            <div class="text"><h3>Contenedor Café</h3><p>$8.500</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Espumador Digital" data-precio="12000">
+            <div class="im"><img src="https://www.nespresso.com/ecom/medias/sys_master/public/27836031762462/AEROCCINOS-600X337PX-4.png" alt="Espumador Manual" /></div>
+            <div class="text"><h3>Espumador Manual</h3><p>$12.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Bowl de Mezcla" data-precio="6000">
+            <div class="im"><img src="https://www.aliton.com.mx/cdn/shop/files/61224321PDM001G-Photoroom_800x800.png?v=1713042535" alt="Bol de Mezcla" /></div>
+            <div class="text"><h3>Bol de Mezcla</h3><p>$6.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Kit Limpieza Cafetera" data-precio="14000">
+            <div class="im"><img src="https://media.miele.com/images/2000020/200002006/20000200632.png?impolicy=boxed&imwidth=1536" alt="Kit Limpieza Cafetera" /></div>
+            <div class="text"><h3>Kit Limpieza Cafetera</h3><p>$14.000</p><button class="agregar">Añadir al carrito</button></div>
+        </div>
+        <div class="insumo" data-nombre="Pinzas Servir" data-precio="7500">
+            <div class="im"><img src="https://inoxibar.com/2225-home_default/pinza-barbacoa.jpg" alt="Pinzas Servir" /></div>
+            <div class="text"><h3>Pinzas Servir</h3><p>$7.500</p><button class="agregar">Añadir al carrito</button></div>
         </div>
     </div>
+
     <script src="functions_pedido.js"></script>
     <footer>
         <div class="footer-section">
@@ -147,18 +217,18 @@
         <div class="footer-section">
             <h3>Sucursales</h3>
             <ul>
-                <li>Calle Principal 123, Melipilla</li>
-                <li>Avenida Central 456, Villarica</li>
-                <li>Bulevar 789, Copiapó</li>
+                <li><i class="fas fa-map-marker-alt"></i> Calle Principal 123, Melipilla</li>
+                <li><i class="fas fa-map-marker-alt"></i> Avenida Central 456, Villarica</li>
+                <li><i class="fas fa-map-marker-alt"></i> Bulevar 789, Copiapó</li>
             </ul>
         </div>
-        <div class="footer-section">
-            <h3>Políticas</h3>
-            <ul>
-                <li><a href="#">Políticas de Envío</a></li>
-                <li><a href="#">Términos y Condiciones</a></li>
-            </ul>
-        </div>
+            <div class="footer-section">
+                <h3>Políticas</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Políticas de Envío</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Términos y Condiciones</a></li>
+                </ul>
+            </div>
     </footer>
 </body>
 </html>
