@@ -121,6 +121,7 @@ nav {
 }
 
 .barra-busqueda{
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -145,7 +146,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 1px;
+    
 }
 
 .filtro-precio input{
