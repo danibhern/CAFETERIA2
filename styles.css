@@ -271,11 +271,12 @@ footer {
   margin-bottom: 0.8rem;
 }
 
-.footer-section ul li a i {
+.footer-section ul li a  {
   margin-right: 8px;
   color: #fff;
   vertical-align: middle;
   font-size: 1.1rem;
+  min-width: 20px;
 }
 
 .footer-section a {
@@ -283,7 +284,10 @@ footer {
   transition: color 0.3s ease;
 }
 
-.footer-section a:hover,
+.footer-section ul li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
 .footer-section a:focus {
   color: #fffefd;
   outline: none;
