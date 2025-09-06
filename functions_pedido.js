@@ -1,20 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
     const botonesAgregar = document.querySelectorAll(".agregar");
-    const listaCarrito = document.getElementById("lista-carrito");
-    const totalSpan = document.getElementById("total");
-    const checkoutBtn = document.getElementById("checkout");
-    const contadorIcono = document.getElementById("contador");
+    const listaCarrito = document.getElementById("lista-carrito"); // existe solo en carrito.html
+    const totalSpan = document.getElementById("total"); // existe solo en carrito.html
+    const checkoutBtn = document.getElementById("checkout"); // existe solo en carrito.html
+    const contadorIcono = document.getElementById("contador"); // existe en pedido.html
 
     // Cargar carrito desde localStorage o crear vacío
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    // Función para actualizar contador del icono
+    // ✅ Actualiza contador del ícono
     function actualizarContadorIcono() {
-        contadorIcono.textContent = carrito.length;
+        if (contadorIcono) {
+            contadorIcono.textContent = carrito.length;
+        }
     }
 
-    // Función para renderizar el carrito en esta página
-    function actualizarCarrito() {
+    // ✅ Renderiza carrito (solo si estamos en carrito.html)
+    function renderCarrito() {
+        if (!listaCarrito || !totalSpan) return; // si no existe, no hace nada
+
         listaCarrito.innerHTML = "";
         if (carrito.length === 0) {
             listaCarrito.innerHTML = "<li>No hay productos aún.</li>";
@@ -36,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             btnEliminar.addEventListener("click", () => {
                 carrito.splice(index, 1); // elimina del array
                 localStorage.setItem("carrito", JSON.stringify(carrito)); // actualizar localStorage
-                actualizarCarrito();
+                renderCarrito();
                 actualizarContadorIcono();
             });
 
@@ -47,37 +51,41 @@ document.addEventListener("DOMContentLoaded", () => {
         totalSpan.textContent = total.toLocaleString();
     }
 
-    // Evento click en "Agregar"
-    botonesAgregar.forEach(boton => {
-        boton.addEventListener("click", (e) => {
-            const producto = e.target.closest(".producto, .insumo");
-            const nombre = producto.getAttribute("data-nombre");
-            const precio = parseInt(producto.getAttribute("data-precio"));
+    // ✅ Evento click en "Agregar" (solo en pedido.html)
+    if (botonesAgregar.length > 0) {
+        botonesAgregar.forEach(boton => {
+            boton.addEventListener("click", (e) => {
+                const producto = e.target.closest(".producto, .insumo");
+                const nombre = producto.getAttribute("data-nombre");
+                const precio = parseInt(producto.getAttribute("data-precio"));
 
-            carrito.push({ nombre, precio });
+                carrito.push({ nombre, precio });
 
-            // Guardar en localStorage
-            localStorage.setItem("carrito", JSON.stringify(carrito));
+                // Guardar en localStorage
+                localStorage.setItem("carrito", JSON.stringify(carrito));
 
-            actualizarCarrito();
-            actualizarContadorIcono();
+                actualizarContadorIcono();
+                alert(`${nombre} agregado al carrito ✅`);
+            });
         });
-    });
+    }
 
-    // Botón de pagar
-    checkoutBtn.addEventListener("click", () => {
-        if (carrito.length === 0) {
-            alert("Tu carrito está vacío.");
-        } else {
-            alert("¡Gracias por tu compra! 🛒");
-            carrito = []; // vaciar carrito
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-            actualizarCarrito();
-            actualizarContadorIcono();
-        }
-    });
+    // ✅ Botón de pagar (solo en carrito.html)
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener("click", () => {
+            if (carrito.length === 0) {
+                alert("Tu carrito está vacío.");
+            } else {
+                alert("¡Gracias por tu compra! 🛒");
+                carrito = []; // vaciar carrito
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                renderCarrito();
+                actualizarContadorIcono();
+            }
+        });
+    }
 
-    // Inicializar al cargar la página
-    actualizarCarrito();
+    // Inicializar
     actualizarContadorIcono();
+    renderCarrito();
 });
