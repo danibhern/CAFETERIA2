@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Carrito</title>
+    <link rel="stylesheet" href="estilo_carrito.css">
+</head>
+<body>
+    <nav>
+    <div class="barra-nav">
+        <div class="logo"></div>
+        <img src="images/nebula.png" alt="nebula">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Quienes Somos</a>
+            <a href="menu-nebula.pdf" target="_blank" rel="noopener noreferrer">Menú</a>
+            
+            <a href="#">Pedidos</a>
+        </div>
+        </div>
+        <a href="inicio_sesion.html"><button class="boton-login">Iniciar sesión</button></a>
+    </nav>
+    <div class="total">
+        <h1>Resumen de tu Pedido</h1>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button id="checkout">Pagar</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            const listaCarrito = document.getElementById("lista-carrito");
+            const totalSpan = document.getElementById("total");
+            const checkoutBtn = document.getElementById("checkout");
+
+            function renderCarrito() {
+                listaCarrito.innerHTML = "";
+                if (carrito.length === 0) {
+                    listaCarrito.innerHTML = "<li>No hay productos aún.</li>";
+                    totalSpan.textContent = "0";
+                    return;
+                }
+
+                let total = 0;
+                carrito.forEach(item => {
+                    total += item.precio;
+                    const li = document.createElement("li");
+                    li.textContent = `${item.nombre} - $${item.precio.toLocaleString()}`;
+                    listaCarrito.appendChild(li);
+                });
+                totalSpan.textContent = total.toLocaleString();
+            }
+
+            // Botón de pagar
+            checkoutBtn.addEventListener("click", () => {
+                if (carrito.length === 0) {
+                    alert("Tu carrito está vacío.");
+                } else {
+                    alert("¡Gracias por tu compra! 🛒");
+                    carrito = [];
+                    localStorage.setItem("carrito", JSON.stringify(carrito));
+                    renderCarrito();
+                }
+            });
+
+            renderCarrito();
+        });
+    </script>
+    <footer>
+        <div class="footer-section">
+            <h3>Redes Sociales</h3>
+            <ul>
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Sucursales</h3>
+            <ul>
+                <li>Calle Principal 123, Melipilla</li>
+                <li>Avenida Central 456, Villarica</li>
+                <li>Bulevar 789, Copiapó</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Políticas</h3>
+            <ul>
+                <li><a href="#">Políticas de Envío</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

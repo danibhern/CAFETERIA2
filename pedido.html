@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <link rel="stylesheet" href="estilo_pedido.css">
+</head>
+<body>
+    <nav>
+    <div class="barra-nav">
+        <div class="logo"></div>
+        <img src="images/nebula.png" alt="nebula">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Quienes Somos</a>
+            <a href="menu-nebula.pdf" target="_blank" rel="noopener noreferrer">Menú</a>
+            
+            <a href="pedido.html">Pedidos</a>
+        </div>
+        </div>
+        <a href="inicio_sesion.html"><button class="boton-login">Iniciar sesión</button></a>
+        <div id="carrito-icono">
+        🛒 <span id="contador">0</span>
+        <a href="carrito.html">Ver Carrito</a>
+    </div>
+    </nav>
+        <div id="container">
+        <h1>Pedidos de Café</h1>
+        <!-- Productos Café -->
+        <div class="producto" data-nombre="Café Daroma" data-precio="5890">
+            <div class="img">
+                <img src="https://focusmood.coffee/cl/wp-content/uploads/2024/08/Envase-Arabico-Negro-1-600x450.png" alt="">
+            </div>
+            <div class="text">
+                <h3>Café Daroma</h3>
+                <h5>Cafe en grano 250g</h5>
+                <p>$5.890</p>
+                <button class="agregar">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="producto" data-nombre="Manuel Caffe" data-precio="10000">
+            <div class="img">
+                <img src="https://manuelcaffe.cl/wp-content/uploads/2025/01/DOIPACK-Armonia_A_62e3ceb6-e998-47a6-b1ca-77804ae85a4e.png" alt="">
+            </div>
+            <div class="text">
+                <h3>Manuel Caffe</h3>
+                <h5>Café molido 500g</h5>
+                <p>$10.000</p>
+                <button class="agregar">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="producto" data-nombre="Café Nestle Bonka" data-precio="10000">
+            <div class="img">
+                <img src="https://comercialboncafe.com/wp-content/uploads/2025/03/3D-BONKA_ECONOCMY_delizzia.png" alt="">
+            </div>
+            <div class="text">
+                <h3>Café Nestle Bonka</h3>
+                <h5>Café en grano 250g</h5>
+                <p>$10.000</p>
+                <button class="agregar">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="producto" data-nombre="Britt" data-precio="15000">
+            <div class="img">
+                <img src="http://cafebritt.com/cdn/shop/files/costa-rican-chocolate-milk-chocolate-covered-coffee-beans-12oz-front-view.webp?v=1700684501" alt="">
+            </div>
+            <div class="text">
+                <h3>Britt</h3>
+                <h5>Café y chocolate 170g</h5>
+                <p>$15.000</p>
+                <button class="agregar">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="container2">
+        <h1>Insumos de Café</h1>
+
+        <!-- Productos Insumos -->
+        <div class="insumo" data-nombre="Kit Basico Barista" data-precio="25000">
+            <div class="im">
+                <img src="https://berlingo.com.mx/wp-content/uploads/2024/12/KIT-BARISTA-3-600x600.png" alt="">
+            </div>
+            <div class="text">
+                <h3>Kit Basico Barista</h3>
+                <p>$25.000</p>
+                <button class="agregar">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="insumo" data-nombre="Prensa Francesa" data-precio="18000">
+            <div class="im">
+                <img src="https://www.outletdelcafe.cl/cdn/shop/files/Prensa-francesa-termometro_1.webp?v=1734096139&width=1080" alt="">
+            </div>
+            <div class="text">
+                <h3>Prensa Francesa</h3>
+                <p>$18.000</p>
+                <button class="agregar">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="insumo" data-nombre="Jarra de 20 Oz" data-precio="10000">
+            <div class="im">
+                <img src="https://berlingo.com.mx/wp-content/uploads/2024/12/KIT-BARISTA-5-600x600.png" alt="">
+            </div>
+            <div class="text">
+                <h3>Jarra de 20 Oz</h3>
+                <p>$10.000</p>
+                <button class="agregar">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="insumo" data-nombre="Best whip" data-precio="10000">
+            <div class="im">
+                <img src="https://carsnack.cl/cdn/shop/files/BEST_WHIP_SIFON_BARISTA_PRO_1-2L.png?v=1722454363" alt="">
+            </div>
+            <div class="text">
+                <h3>best whip</h3>
+                <p>$11.000</p>
+                <button class="agregar">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+    <script src="carrito.js"></script>
+    <footer>
+        <div class="footer-section">
+            <h3>Redes Sociales</h3>
+            <ul>
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Sucursales</h3>
+            <ul>
+                <li>Calle Principal 123, Melipilla</li>
+                <li>Avenida Central 456, Villarica</li>
+                <li>Bulevar 789, Copiapó</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Políticas</h3>
+            <ul>
+                <li><a href="#">Políticas de Envío</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
