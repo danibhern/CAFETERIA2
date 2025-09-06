@@ -91,7 +91,7 @@ nav {
   max-width: 965px;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
   max-height: 300px;
   position: relative;
 }
@@ -121,13 +121,14 @@ nav {
   padding: 1rem 2rem;
   background-color: #b85390;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(163, 67, 170, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   display: block;
 }
 
 .promo-mes h2 {
   text-align: center;
   font-weight: 700;
+  padding-left: 25%;
   margin-bottom: 1.5rem;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
@@ -179,7 +180,7 @@ nav {
   padding: 1.5rem 2rem;
   background-color: #b788bd;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .reservacion h2 {
