@@ -1,11 +1,11 @@
 html, body {
-  margin: 0; padding: 0;
   height: 100%;
+  margin: 0; padding: 0;
   background-image:
     repeating-linear-gradient(
       to bottom,
-      rgba(285,285,285,0.05),
-      rgba(285,285,285,0.05) 3px,
+      rgba(285, 285, 285, 0.05),
+      rgba(285, 285, 285, 0.05) 3px,
       transparent 4px,
       transparent 14px
     ),
@@ -14,33 +14,24 @@ html, body {
   background-size: auto, cover;
   background-position: center center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .pdf-container {
-  width: 70vw;
-  height: 80vh;
-  background-color: rgba(255,255,255,0.95);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  border-radius: 15px;
-  padding: 10px;
+  width: 80vw;
+  height: 85vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-
-iframe {
-  border: none;
+embed {
   width: 100%;
   height: 100%;
-  max-width: 900px; 
-  max-height: 1100px;
-  transform: scale(0.8);
-  transform-origin: top left;
-  box-shadow: 0 0 8px rgba(0,0,0,0.25);
   border-radius: 10px;
+  display: block;
 }
