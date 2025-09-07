@@ -388,8 +388,8 @@ footer .footer-section ul li a:focus {
 
 /* -------------------- Errores -------------------- */
 .error {
-  outline: 1px rgb(248, 157, 172) solid;
-  background-color: #ad3c80;
+  outline: 1px rgb(248, 157, 172) solid !important;
+  background-color: #ad3c80 !important;
 }
 
 #errores p {
