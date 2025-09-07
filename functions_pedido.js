@@ -97,31 +97,11 @@ function buscar() {
     items.forEach(item => {
         let nombre = item.getAttribute("data-nombre").toLowerCase();
         
-   
         if (nombre.includes(input)) {
         item.style.display = "flex"; 
         } else {
         item.style.display = "none";
         }
     });
-
-    function filtrarTodo() {
-        let input = document.getElementById("input-busqueda").value.toLowerCase();
-        let min = parseFloat(document.getElementById("precio-min").value) || 0;
-        let max = parseFloat(document.getElementById("precio-max").value) || Infinity;
-
-        let items = document.querySelectorAll(".producto, .insumo");
-
-        items.forEach(item => {
-            let nombre = item.getAttribute("data-nombre").toLowerCase();
-            let precio = parseFloat(item.getAttribute("data-precio"));
-
-            if (nombre.includes(input) && precio >= min && precio <= max) {
-                item.style.display = "flex";
-            } else {
-                item.style.display = "none";
-            }
-        });
-    }
 
 }

@@ -187,7 +187,7 @@ nav {
 /* -------------------- Reservación -------------------- */
 .reservacion {
   flex: 1;
-  height: 650px;
+  height: 700px; /* no mover el tamaño, si se mueve no se ven los mensajes de error*/
   box-sizing: border-box;
   background-color: #b788bd;
   border-radius: 12px;
@@ -272,7 +272,7 @@ input[type="date"] {
 /* -------------------- Blog Nebula (Instagram) -------------------- */
 .blog-nebula {
   flex: 1;
-  height: 650px;
+  height: 700px;
   box-sizing: border-box;
   background-color: #b788bd;
   border-radius: 12px;
@@ -307,6 +307,7 @@ input[type="date"] {
 }
 
 .instagram-grid {
+  margin-top: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -394,4 +395,5 @@ footer .footer-section ul li a:focus {
 #errores p {
   display: flex;
   color: white;
+  margin: 5px 0;
 }
