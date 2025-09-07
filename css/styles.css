@@ -5,11 +5,11 @@ body, html {
   background: linear-gradient(135deg, #e3c0d5 0%, #bb8fca 100%);
   color: #4a2542;
 
-    background-image:
+  background-image:
     repeating-linear-gradient(
       to bottom,
-      rgba(285, 285, 285, 0.05), 
-      rgba(285, 285, 285, 0.05) 3px, 
+      rgba(255, 255, 255, 0.05), 
+      rgba(255, 255, 255, 0.05) 3px, 
       transparent 4px,
       transparent 14px 
     ),
@@ -18,7 +18,6 @@ body, html {
   background-size: auto, cover;
   background-position: center center;
 }
-
 
 a {
   text-decoration: none;
@@ -55,6 +54,7 @@ nav {
   display: flex;
   gap: 1.6rem;
 }
+
 .nav-links a {
   color: #fff;
   font-weight: 600;
@@ -63,6 +63,7 @@ nav {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
+
 .nav-links a:hover,
 .nav-links a:focus {
   background-color: rgba(255, 255, 255, 0.25);
@@ -78,6 +79,7 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .boton-login:hover,
 .boton-login:focus {
   background-color: #ffaf00;
@@ -112,7 +114,6 @@ nav {
   text-align: center;
   margin-top: 0.7rem;
 }
-
 
 /* -------------------- Promo del Mes -------------------- */
 .promo-mes {
@@ -154,6 +155,7 @@ nav {
   margin-top: -50px;
   transition: transform 0.4s ease;
 }
+
 .promo-mes img:hover {
   transform: scale(1.05);
 }
@@ -162,24 +164,34 @@ nav {
   flex: 2 1 400px;
   color: white;
 }
+
 .producto-info h3 {
   margin-top: 0;
   font-weight: 700;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
+
 .producto-info p {
   font-size: 1rem;
   line-height: 1.5;
 }
 
+/* -------------------- Contenedor reserva y blog -------------------- */
+.contenedor-reserva-blog {
+  max-width: 965px;
+  margin: 2rem auto;
+  display: flex;
+  gap: 2rem;
+}
+
 /* -------------------- Reservación -------------------- */
 .reservacion {
-  max-width: 600px;
+  flex: 1;
   height: 650px;
-  margin: 2rem auto;
-  padding: 1.5rem 2rem;
+  box-sizing: border-box;
   background-color: #b788bd;
   border-radius: 12px;
+  padding: 1.5rem 2rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -190,7 +202,6 @@ nav {
   color: #fff;
 }
 
-/* Formulario */
 form {
   display: grid;
   gap: 1rem;
@@ -214,11 +225,27 @@ select {
   width: 100%;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: white url('data:image/svg+xml;utf8,<svg fill="none" height="24" stroke="%23747878" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"/></svg>') no-repeat right 10px center;
+  background-size: 12px;
 }
 
 input:focus,
 select:focus {
   border-color: #f697fa;
+}
+
+/* Mantener apariencia estándar para input text */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: white;
 }
 
 .reservacion button[type="submit"] {
@@ -243,6 +270,62 @@ select:focus {
   outline: none;
 }
 
+/* -------------------- Blog Nebula (Instagram) -------------------- */
+.blog-nebula {
+  flex: 1;
+  height: 650px;
+  box-sizing: border-box;
+  background-color: #b788bd;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+  overflow-y: auto;
+}
+
+.blog-nebula h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blog-nebula h2 i {
+  font-size: 1.8rem;
+  color: #e4405f; /* Instagram pink */
+}
+
+.blog-nebula a.instagram-handle {
+  color: #f2b7c2;
+  text-decoration: none;
+}
+
+.blog-nebula a.instagram-handle:hover {
+  text-decoration: underline;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.instagram-grid a img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.instagram-grid a img:hover {
+  transform: scale(1.05);
+}
+
 /* -------------------- Footer -------------------- */
 footer {
   background-color: #b85390;
@@ -263,13 +346,13 @@ footer {
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  color: #ffffff; /* mantengo blanco */
+  color: #ffffff;
 }
 
 footer .footer-section ul li,
 footer .footer-section ul li a,
 footer .footer-section ul li i {
-  color: #e1cdda; 
+  color: #e1cdda;
 }
 
 footer .footer-section ul li a {
@@ -292,7 +375,7 @@ footer .footer-section ul li a:focus {
   margin-bottom: 0.8rem;
 }
 
-.footer-section ul li a  {
+.footer-section ul li a {
   margin-right: 8px;
   vertical-align: middle;
   font-size: 1.1rem;
@@ -309,7 +392,7 @@ footer .footer-section ul li a:focus {
   background-color: #ad3c80;
 }
 
-#errores p{
+#errores p {
   display: flex;
   color: white;
 }
