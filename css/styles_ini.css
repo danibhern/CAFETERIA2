@@ -1,21 +1,34 @@
 body, html {
-  margin: 0; padding: 0;
+  margin: 0; 
+  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-/* 
-  background-image:
-    repeating-linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.05), 
-      rgba(255, 255, 255, 0.05) 3px, 
-      transparent 4px,
-      transparent 14px 
-    ),
-    linear-gradient(135deg, #e3c0d5 0%, #bb8fca 100%);
-  background-repeat: repeat, no-repeat;
-  background-size: auto, cover;
-  background-position: center center; */
+
+  /* Quitamos el background directo para que no se duplique */
+  background: none;
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
 }
 
+/* Pseudo elemento para imagen de fondo con blur */
+body::before {
+  content: "";
+  position: fixed; /* ocupa toda la pantalla y fija */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  background-image: url('../images/fondo-inicio-sesion.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+  filter: blur(8px); /* nivel de desenfoque */
+  z-index: -1; /* detrás del contenido */
+}
+
+/* Estilos de navegación y otros sin cambiar */
 
 nav {
   background: linear-gradient(90deg, #b788bd, #b85390);
@@ -101,7 +114,6 @@ nav {
   box-sizing: border-box;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
-
 
 .links-container {
   display: flex;
