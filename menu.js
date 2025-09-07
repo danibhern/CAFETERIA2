@@ -1,4 +1,4 @@
-const url = 'menu-nebula.pdf'; // Cambia aquí por tu PDF
+const url = 'menu-nebula.pdf'; 
 
 const pdfjsLib = window['pdfjs-dist/build/pdf'];
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@3.7.107/build/pdf.worker.min.js';

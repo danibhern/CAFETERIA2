@@ -72,7 +72,6 @@ form.addEventListener('submit', function(e) {
 
     if (hayErrores) {
         e.preventDefault();
-        // Mostrar todos los mensajes guardados en el Set
         errores.innerHTML = Array.from(set).join("");
     }
 });

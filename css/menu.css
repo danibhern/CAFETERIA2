@@ -16,7 +16,6 @@ html, body {
   background-position: center center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-  /* Permitimos scroll solo en y, no centramos contenido para que nav esté arriba */
   overflow-x: hidden;
   overflow-y: auto;
   display: block;
@@ -30,7 +29,7 @@ nav {
   padding: 0.3rem 2rem;
   height: 70px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  position: sticky;    /* barra fija al top al hacer scroll */
+  position: sticky;   
   top: 0;
   z-index: 10;
 }
@@ -85,7 +84,7 @@ nav {
   outline: none;
 }
 
-/* Contenedor del PDF, con margen para dejar espacio para la barra fija */
+
 .pdf-container {
   width: 60vw;       
   height: 80vh;      

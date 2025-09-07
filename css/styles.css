@@ -237,7 +237,6 @@ select:focus {
   border-color: #f697fa;
 }
 
-/* Mantener apariencia estándar para input text */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -295,7 +294,7 @@ input[type="date"] {
 
 .blog-nebula h2 i {
   font-size: 1.8rem;
-  color: #e4405f; /* Instagram pink */
+  color: #e4405f; 
 }
 
 .blog-nebula a.instagram-handle {
