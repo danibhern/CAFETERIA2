@@ -16,6 +16,7 @@ body, html {
   background-position: center center;
 }
 
+
 nav {
   background: linear-gradient(90deg, #b788bd, #b85390);
   display: flex;
@@ -78,13 +79,20 @@ nav {
   outline: none;
 }
 
+.logo-ini {
+  max-width: 190px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  margin-top: -50px;
+}
+
 #container {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #b788bd;
   width: 35%;
-  height: 350%;
+  height: 120%;
   flex-direction: column;
   padding: 2rem ;
   margin: 10rem auto;
@@ -94,11 +102,6 @@ nav {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-#container > h1 {
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-}
 
 .links-container {
   display: flex;
