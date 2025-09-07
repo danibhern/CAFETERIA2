@@ -91,7 +91,7 @@ nav {
   max-width: 190px;
   height: auto;
   margin-bottom: 1.5rem;
-  margin-top: -50px;
+  margin-top: -60px;
 }
 
 #container {
@@ -100,7 +100,7 @@ nav {
   justify-content: center;
   background-color: #b788bd;
   width: 35%;
-  height: 120%;
+  min-height: 00px;
   flex-direction: column;
   padding: 2rem ;
   margin: 10rem auto;
