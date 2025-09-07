@@ -32,17 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const li = document.createElement("li");
             li.textContent = `${item.nombre} - $${item.precio.toLocaleString()}`;
 
-
-            const btnEliminar = document.createElement("button");
-            btnEliminar.textContent = "❌";
-            btnEliminar.style.marginLeft = "10px";
-            btnEliminar.addEventListener("click", () => {
-                carrito.splice(index, 1); // elimina del array
-                localStorage.setItem("carrito", JSON.stringify(carrito)); // actualizar localStorage
-                renderCarrito();
-                actualizarContadorIcono();
-            });
-
             li.appendChild(btnEliminar);
             listaCarrito.appendChild(li);
         });
@@ -64,30 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 localStorage.setItem("carrito", JSON.stringify(carrito));
 
                 actualizarContadorIcono();
-                alert(`${nombre} agregado al carrito ✅`);
             });
         });
     }
 
-
-    if (checkoutBtn) {
-        checkoutBtn.addEventListener("click", () => {
-            if (carrito.length === 0) {
-                alert("Tu carrito está vacío.");
-            } else {
-                alert("¡Gracias por tu compra! 🛒");
-                carrito = []; 
-                localStorage.setItem("carrito", JSON.stringify(carrito));
-                renderCarrito();
-                actualizarContadorIcono();
-            }
-        });
-    }
-
-
     actualizarContadorIcono();
     renderCarrito();
 });
+
+// barra de buzqueda 
 function buscar() {
     let input = document.getElementById("input-busqueda").value.toLowerCase();
 

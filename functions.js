@@ -10,22 +10,6 @@ function mostrarImagen() {
   carrusel.style.transform = `translateX(${-index * width}px)`;
 }
 
-next.addEventListener("click", () => {
-  index++;
-  if (index >= imagenes.length) {
-    index = 0; 
-  }
-  mostrarImagen();
-});
-
-prev.addEventListener("click", () => {
-  index--;
-  if (index < 0) {
-    index = imagenes.length - 1;
-  }
-  mostrarImagen();
-});
-
 
 setInterval(() => {
   index++;
