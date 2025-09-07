@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 carrito.push({ nombre, precio });
 
-  
                 localStorage.setItem("carrito", JSON.stringify(carrito));
 
                 actualizarContadorIcono();
