@@ -2,18 +2,15 @@ body, html {
   margin: 0; 
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  /* Quitamos el background directo para que no se duplique */
   background: none;
   position: relative;
   height: 100%;
   overflow-x: hidden;
 }
 
-/* Pseudo elemento para imagen de fondo con blur */
 body::before {
   content: "";
-  position: fixed; /* ocupa toda la pantalla y fija */
+  position: fixed; 
   top: 0;
   left: 0;
   right: 0;
@@ -24,11 +21,9 @@ body::before {
   background-position: center center;
   background-size: cover;
   
-  filter: blur(8px); /* nivel de desenfoque */
-  z-index: -1; /* detrás del contenido */
+  filter: blur(8px); 
+  z-index: -1; 
 }
-
-/* Estilos de navegación y otros sin cambiar */
 
 nav {
   background: linear-gradient(90deg, #b788bd, #b85390);
@@ -121,7 +116,7 @@ nav {
   margin-top: 1rem;
 }
 
-/* Aquí quitamos el subrayado */
+
 .links-container a {
   color: #f5d1e4;
   text-decoration: none;
