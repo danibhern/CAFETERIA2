@@ -118,13 +118,15 @@ label {
 
 input,
 select {
-  padding: 8px 10px;
+  padding: 7px 10px;
   border: 2px solid #b85390;
   border-radius: 8px;
   font-size: 1rem;
   outline-offset: 2px;
   width: 100%;
   box-sizing: border-box;
+  appearance: none;
+  -moz-appearance: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
