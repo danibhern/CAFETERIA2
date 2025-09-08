@@ -28,72 +28,71 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-            const listaCarrito = document.getElementById("lista-carrito");
-            const totalSpan = document.getElementById("total");
-            const checkoutBtn = document.getElementById("checkout");
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const listaCarrito = document.getElementById("lista-carrito");
+    const totalSpan = document.getElementById("total");
+    const checkoutBtn = document.getElementById("checkout");
 
-            function renderCarrito() {
-                listaCarrito.innerHTML = "";
-                if (carrito.length === 0) {
-                    listaCarrito.innerHTML = "<li>No hay productos aún.</li>";
-                    totalSpan.textContent = "0";
-                    return;
-                }
+    function renderCarrito() {
+        listaCarrito.innerHTML = "";
 
-                let total = 0;
-                carrito.forEach((item, index) => {
-                    total += item.precio;
+        if (carrito.length === 0) {
+            listaCarrito.innerHTML = "<li>No hay productos aún.</li>";
+            totalSpan.textContent = "0";
+            return;
+        }
 
-                    // Crear elemento li
-                    const li = document.createElement("li");
+        let total = 0;
+        carrito.forEach((item, index) => {
+            total += item.precio;
 
-                    const img = document.createElement("img");
-                    img.src = item.img;
-                    img.att = item.nombre;
-                    img.classList.add("img-carrito");
+            const li = document.createElement("li");
+            li.classList.add("item-carrito");
 
-                    // Texto del producto
-                    const texto = document.createElement("span");
-                    texto.textContent = `${item.nombre} - $${item.precio.toLocaleString()}`;
+            // Imagen del producto
+            const img = document.createElement("img");
+            img.src = item.imagen || item.img; // usa la propiedad correcta
+            img.alt = item.nombre;
+            img.classList.add("img-carrito");
 
-                    // Botón X
-                    const btnEliminar = document.createElement("button");
-                    btnEliminar.textContent = "X";
-                    btnEliminar.classList.add("btn-eliminar");
+            // Texto del producto
+            const texto = document.createElement("span");
+            texto.textContent = `${item.nombre} - $${item.precio.toLocaleString()}`;
 
-                    // Evento eliminar
-                    btnEliminar.addEventListener("click", () => {
-                        carrito.splice(index, 1); // eliminar del array
-                        localStorage.setItem("carrito", JSON.stringify(carrito)); // actualizar storage
-                        renderCarrito(); // redibujar lista
-                    });
-
-                    // Agregar al li
-                    li.appendChild(img);
-                    li.appendChild(texto);
-                    li.appendChild(btnEliminar);
-
-                    // Agregar al UL
-                    listaCarrito.appendChild(li);
-                });
-
-                totalSpan.textContent = total.toLocaleString();
-            }
-
-            checkoutBtn.addEventListener("click", () => {
-                if (carrito.length === 0) {
-                    alert("Tu carrito está vacío.");
-                } else {
-                    alert("¡Gracias por tu compra! 🛒");
-                    carrito = [];
-                    localStorage.setItem("carrito", JSON.stringify(carrito));
-                    renderCarrito();
-                }
+            // Botón eliminar
+            const btnEliminar = document.createElement("button");
+            btnEliminar.textContent = "❌";
+            btnEliminar.classList.add("btn-eliminar");
+            btnEliminar.addEventListener("click", () => {
+                carrito.splice(index, 1);
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                renderCarrito();
             });
 
-            renderCarrito();
+            li.appendChild(img);
+            li.appendChild(texto);
+            li.appendChild(btnEliminar);
+
+            listaCarrito.appendChild(li);
         });
+
+        totalSpan.textContent = total.toLocaleString();
+    }
+
+    checkoutBtn.addEventListener("click", () => {
+        if (carrito.length === 0) {
+            alert("Tu carrito está vacío.");
+        } else {
+            alert("¡Gracias por tu compra! 🛒");
+            carrito = [];
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            renderCarrito();
+        }
+    });
+
+    renderCarrito();
+});
+
     </script>
     <footer>
         <div class="footer-section">
