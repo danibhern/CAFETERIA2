@@ -110,11 +110,6 @@ nav {
   flex-shrink: 0;
 }
 
-.carrusel-control {
-  text-align: center;
-  margin-top: 0.7rem;
-}
-
 /* -------------------- Promo del Mes -------------------- */
 .promo-mes {
   max-width: 900px;
