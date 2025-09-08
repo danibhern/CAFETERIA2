@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-
+    // Función para actualizar contador del carrito
     function actualizarContadorIcono() {
         if (contadorIcono) {
             contadorIcono.textContent = carrito.length;
         }
     }
 
-
+    // Función para renderizar el carrito
     function renderCarrito() {
         if (!listaCarrito || !totalSpan) return; 
 
@@ -30,51 +30,69 @@ document.addEventListener("DOMContentLoaded", () => {
             total += item.precio;
 
             const li = document.createElement("li");
-            li.textContent = `${item.nombre} - $${item.precio.toLocaleString()}`;
+            li.classList.add("item-carrito");
 
+            // Imagen del producto
+            const img = document.createElement("img");
+            img.src = item.imagen;
+            img.alt = item.nombre;
+            img.classList.add("img-carrito");
+
+            // Texto del producto
+            const texto = document.createElement("span");
+            texto.textContent = `${item.nombre} - $${item.precio.toLocaleString()}`;
+
+            // Botón eliminar
+            const btnEliminar = document.createElement("button");
+            btnEliminar.textContent = "❌";
+            btnEliminar.classList.add("btn-eliminar");
+            btnEliminar.addEventListener("click", () => {
+                carrito.splice(index, 1);
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                renderCarrito();
+                actualizarContadorIcono();
+            });
+
+            li.appendChild(img);
+            li.appendChild(texto);
             li.appendChild(btnEliminar);
+
             listaCarrito.appendChild(li);
         });
 
         totalSpan.textContent = total.toLocaleString();
     }
 
-
+    // Agregar productos al carrito
     if (botonesAgregar.length > 0) {
         botonesAgregar.forEach(boton => {
             boton.addEventListener("click", (e) => {
                 const producto = e.target.closest(".producto, .insumo");
                 const nombre = producto.getAttribute("data-nombre");
                 const precio = parseInt(producto.getAttribute("data-precio"));
+                const imagen = producto.querySelector("img").src;
 
-                carrito.push({ nombre, precio });
-
+                carrito.push({ nombre, precio, imagen });
                 localStorage.setItem("carrito", JSON.stringify(carrito));
 
+                renderCarrito();
                 actualizarContadorIcono();
             });
         });
     }
 
-    actualizarContadorIcono();
+    // Renderizar carrito al cargar la página
     renderCarrito();
+    actualizarContadorIcono();
 });
 
-// barra de buzqueda 
+// Función de búsqueda
 function buscar() {
-    let input = document.getElementById("input-busqueda").value.toLowerCase();
-
-
-    let items = document.querySelectorAll(".producto, .insumo");
+    const input = document.getElementById("input-busqueda").value.toLowerCase();
+    const items = document.querySelectorAll(".producto, .insumo");
 
     items.forEach(item => {
-        let nombre = item.getAttribute("data-nombre").toLowerCase();
-        
-        if (nombre.includes(input)) {
-        item.style.display = "flex"; 
-        } else {
-        item.style.display = "none";
-        }
+        const nombre = item.getAttribute("data-nombre").toLowerCase();
+        item.style.display = nombre.includes(input) ? "flex" : "none";
     });
-
 }

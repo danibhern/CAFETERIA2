@@ -14,7 +14,6 @@
             <a href="#">Home</a>
             <a href="#">Quienes Somos</a>
             <a href="menu-nebula.pdf" target="_blank" rel="noopener noreferrer">Menú</a>
-            
             <a href="pedido.html">Pedidos</a>
         </div>
         </div>
@@ -43,15 +42,44 @@
                 }
 
                 let total = 0;
-                carrito.forEach(item => {
+                carrito.forEach((item, index) => {
                     total += item.precio;
+
+                    // Crear elemento li
                     const li = document.createElement("li");
-                    li.textContent = `${item.nombre} - $${item.precio.toLocaleString()}`;
+
+                    const img = document.createElement("img");
+                    img.src = item.img;
+                    img.att = item.nombre;
+                    img.classList.add("img-carrito");
+
+                    // Texto del producto
+                    const texto = document.createElement("span");
+                    texto.textContent = `${item.nombre} - $${item.precio.toLocaleString()}`;
+
+                    // Botón X
+                    const btnEliminar = document.createElement("button");
+                    btnEliminar.textContent = "X";
+                    btnEliminar.classList.add("btn-eliminar");
+
+                    // Evento eliminar
+                    btnEliminar.addEventListener("click", () => {
+                        carrito.splice(index, 1); // eliminar del array
+                        localStorage.setItem("carrito", JSON.stringify(carrito)); // actualizar storage
+                        renderCarrito(); // redibujar lista
+                    });
+
+                    // Agregar al li
+                    li.appendChild(img);
+                    li.appendChild(texto);
+                    li.appendChild(btnEliminar);
+
+                    // Agregar al UL
                     listaCarrito.appendChild(li);
                 });
+
                 totalSpan.textContent = total.toLocaleString();
             }
-
 
             checkoutBtn.addEventListener("click", () => {
                 if (carrito.length === 0) {
@@ -71,9 +99,9 @@
         <div class="footer-section">
             <h3>Redes Sociales</h3>
             <ul>
-                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
             </ul>
         </div>
         <div class="footer-section">
